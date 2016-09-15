@@ -51,4 +51,22 @@ function AlbumsIndexController ($http) {
     });
   }
 
+
+
+////there is a missing ) or another error somewhere below
+  vm.editAlbum = function (album) {
+    $http({
+      method: 'PUT',
+      url: '/api/albums/' + album._id,
+      data: {
+        name: album.name,
+        artistName: album.artistName
+      },
+    }).then(function successCallback(updatedAlbum) {
+      console.log('album updated');
+    }, function errorCallback(response) {
+      console.log('edit album error:' error);
+    });
+  }
+
 }
