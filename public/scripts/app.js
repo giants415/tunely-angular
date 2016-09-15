@@ -36,17 +36,18 @@ function AlbumsIndexController ($http) {
 
   vm.getAlbums();
 
-  vm.CreateAlbum = function () {
+  vm.createAlbum = function () {
     $http({
       method: 'POST',
       url: '/api/albums',
       data: vm.newAlbum
     }).then(function successCallback(response) {
       console.log(response.data);
-      vm.ablums.push(response.data);
+      vm.albums.push(response.data);
       vm.newAlbum = {
         name: "",
-        artistName: ""
+        artistName: "",
+        genres: "",
       }
     }, function errorCallback(response) {
       console.log('There was an error getting the data', response);
