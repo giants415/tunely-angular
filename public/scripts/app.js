@@ -17,7 +17,7 @@ config.$inject = ['$routeProvider', '$locationProvider'];
         controller: 'AlbumsIndexController'
       })
       .when('/albums/:id', {
-        template: 'This template will show an album!',
+        templateUrl: '/templates/albums-show',
         controllerAs: 'albumsShowCtrl',
         controller: 'AlbumsShowController'
       });
