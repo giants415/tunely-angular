@@ -13,7 +13,7 @@ config.$inject = ['$routeProvider', '$locationProvider'];
   function config(   $routeProvider,  $locationProvider   ) {
     $routeProvider
       .when('/', {
-        template: 'This template will show the homepage, with all ablums!',
+        templateUrl: '/templates/albums',
         controllerAs: 'albumsIndexCtrl',
         controller: 'AlbumsIndexController'
       })
