@@ -65,7 +65,7 @@ function AlbumsIndexController ($http) {
     }).then(function successCallback(updatedAlbum) {
       console.log('album updated');
     }, function errorCallback(response) {
-      console.log('edit album error:' error);
+      console.log('edit album error:' + error);
     });
   }
 
