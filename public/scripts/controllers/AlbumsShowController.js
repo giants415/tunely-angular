@@ -46,8 +46,9 @@ function AlbumsShowController ($http, $routeParams) {
       url: 'api/albums/'+ $routeParams.id + '/songs/',
       data: vm.newSong
     }).then(function songAddSuccess(json) {
+      console.log(json.data);
       vm.album.songs.push(json.data);
-      // vm.newSong = {};
+      vm.newSong = {};
     }, function errorCallback(response) {
       console.log('Error adding track', response);
     });
